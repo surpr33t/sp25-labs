@@ -1,1 +1,10 @@
 Answers go here!
+Problem 1. Line 249-252 | Segmentation fault occured due array allocation. They needed to use col instead of row. To fix this I used invaderCol instead of row. 
+
+Problem 2. Inside the function getDuelResult() there was an extra semi colon after the of statement which did not allow it to execute. Tpo fix this I removed the semi colon. 
+
+Problem 3. Infinte loop occured due to incrementation issues following the column index. To fix this I added an the incrmeent so the loop could terminate properly. 
+
+Problem 4. Segmentation fault occured due to the deallocation error. The student used the wrong array dimenesion I correct them by matching what was used during allocation.  
+
+Problem 5. Logic error occured when it came to the wrong warrier being killed. To fix this I corrected the comparison so the warrior who was weaker was killed instead. 
