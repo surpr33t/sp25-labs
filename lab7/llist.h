@@ -1,8 +1,12 @@
+#ifndef LLIST_H
+#define LLIST_H
+
+template <typename T>
 class LList{
 private:
   struct Item {
-    Item(const int& v, Item* p, Item* n);
-    int val;
+    Item(const T& v, Item* p, Item* n);
+    T val;
     Item *prev;
     Item *next;
   };
@@ -15,8 +19,8 @@ public:
 
   int size() const;
   bool empty() const;
-  void push_back(const int& val);
-  int& get(int pos);
+  void push_back(const T& val);
+  T& get(int pos);
   void clear();
 
 private:
@@ -26,3 +30,7 @@ private:
   Item* mTail;
   int mSize;
 };
+
+#include "llist.cpp"
+
+#endif
