@@ -23,6 +23,22 @@ std::string Assignment::getName() {
 	return mName;
 }
 
+double Assignment::getPoints() {
+    return mPoints;
+}
+
+int Assignment::getTotalPoints() {
+    return mTotalPoints;
+}
+
+void Assignment::setPoints(double points) {
+    mPoints = points;
+}
+
+void Assignment::setTotalPoints(int totalPoints) {
+    mTotalPoints = totalPoints;
+}
+
 std::string Assignment::getType() {
 	return "Assignment";
 }
