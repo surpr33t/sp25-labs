@@ -11,16 +11,20 @@ std::string Person::getName() {
 	return mName;
 }
 
-Professor::Professor(std::string name, std::string department) {
-	mName = name;
+Professor::Professor(std::string name, std::string department)
+	: Person(name)
+{
+	mDepartment = department;
 }
 
 std::string Professor::getDepartment() {
 	return mDepartment;
 }
 
-Student::Student(std::string name, std::string major) {
-	mName = name;
+Student::Student(std::string name, std::string major)
+	: Person(name)
+{
+	mMajor = major;
 }
 
 void Student::setGPA(double gpa) {
@@ -31,12 +35,15 @@ std::string Student::getMajor() {
 	return mMajor;
 }
 
-UscStudent::UscStudent(std::string name, std::string major, double gpa) {
-	mName = name;
-	mMajor = major;
+UscStudent::UscStudent(std::string name, std::string major, double gpa)
+	: Student(name, major)
+{
 	setGPA(gpa);
 }
 
 void UscStudent::printTranscript() {
-	// TO DO: fill in
+	cout << "University of Southern California" << endl;
+	cout << "Name: " << getName() << endl;
+	cout << "Major: " << getMajor() << endl;
+	cout << "GPA: " << mGpa << endl;
 }
